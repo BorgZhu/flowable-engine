@@ -111,7 +111,11 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>sqlserver</groupId>
+            <artifactId>sqljdbc42</artifactId>
+            <version>4.2</version>
+        </dependency>
         <!-- JSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>

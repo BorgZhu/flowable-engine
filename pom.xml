@@ -1663,6 +1663,13 @@
 				<module>modules/flowable-content-spring-configurator</module>
 				<module>modules/flowable-content-rest</module>
 				<module>modules/flowable-groovy-script-static-engine</module>
+				<module>modules/flowable-ui-common</module>
+				<module>modules/flowable-ui-edge</module>
+				<module>modules/flowable-ui-idm</module>
+				<module>modules/flowable-ui-modeler</module>
+				<module>modules/flowable-ui-task</module>
+				<module>modules/flowable-ui-admin</module>
+
 			</modules>
 			<properties>
 				<skipTests>true</skipTests>

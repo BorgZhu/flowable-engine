@@ -182,7 +182,11 @@
 			<artifactId>postgresql</artifactId>
 			<scope>compile</scope>
         </dependency>
-
+        <dependency>
+            <groupId>sqlserver</groupId>
+            <artifactId>sqljdbc42</artifactId>
+            <version>4.2</version>
+        </dependency>
         <!-- LOGGING -->
         <dependency>
             <groupId>org.slf4j</groupId>
