@@ -553,9 +553,9 @@ angular.module('flowableApp')
                         description: newTask.description,
                         assignee: newTask.assignee ? newTask.assignee.id : null
                     };
-
-                    taskData.parentTaskId = '' + $scope.model.task.id
-
+                    if ($scope.model.task) {
+                        taskData.parentTaskId = '' + $scope.model.task.id
+                    }
                     if ($rootScope.activeAppDefinition) {
                         taskData.category = '' + $rootScope.activeAppDefinition.id;
                     }
