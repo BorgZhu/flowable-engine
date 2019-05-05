@@ -151,11 +151,13 @@
       <if test="lastNameLikeIgnoreCase != null">
         and lower(RES.LAST_) like #{lastNameLikeIgnoreCase}${wildcardEscapeClause}
       </if>
+      <!-- and (CONCAT(CONCAT(RES.FIRST_, ' '), RES.LAST_) like #{fullNameLike}${wildcardEscapeClause}) -->
       <if test="fullNameLike != null">
-        and (CONCAT(CONCAT(RES.FIRST_, ' '), RES.LAST_) like #{fullNameLike}${wildcardEscapeClause})
+        and (dbo.CONCAT(dbo.CONCAT(RES.FIRST_, ' '), RES.LAST_) like #{fullNameLike}${wildcardEscapeClause})
       </if>
+      <!-- and (lower(CONCAT(CONCAT(RES.FIRST_ , ' '), RES.LAST_)) like #{fullNameLikeIgnoreCase}${wildcardEscapeClause})-->
       <if test="fullNameLikeIgnoreCase != null">
-        and (lower(CONCAT(CONCAT(RES.FIRST_ , ' '), RES.LAST_)) like #{fullNameLikeIgnoreCase}${wildcardEscapeClause})
+        and (lower(dbo.CONCAT(dbo.CONCAT(RES.FIRST_ , ' '), RES.LAST_)) like #{fullNameLikeIgnoreCase}${wildcardEscapeClause})
       </if>
       <if test="displayName != null">
         and RES.DISPLAY_NAME_ = #{displayName}
