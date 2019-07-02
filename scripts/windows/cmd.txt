@@ -1,0 +1,14 @@
+D:\code\flowable-engine\scripts\windows\idm.bat
+D:\code\flowable-engine\scripts\windows\task.bat
+D:\code\flowable-engine\scripts\windows\modeler.bat
+
+http://localhost:8888/flowable-modeler/
+http://localhost:9999/flowable-task
+
+GROOVY_HOME
+
+D:\ide\apache-groovy-sdk-2.5.7\groovy-2.5.7
+D:\ide\apache-groovy-sdk-2.5.7\groovy-2.5.7\bin\groovySh
+
+GET http://localhost.:9999/flowable-task/app/rest/task-forms/b27c9749-76f7-11e9-b5e7-f4939ff26e9d HTTP/1.1
+saveTaskForm
