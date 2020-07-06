@@ -25,6 +25,7 @@
 			org.flowable.common.engine.api.io,
 			org.flowable.common.engine.api.management,
 			org.flowable.common.engine.api.query,
+			org.flowable.common.engine.api.variable,
 		</flowable.osgi.export.additional>
 	</properties>
     
