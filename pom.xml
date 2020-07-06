@@ -1102,7 +1102,9 @@
 		<module>modules/flowable-ui-task</module>
 		<module>modules/flowable-ui-admin</module>
 		<module>tooling/archetypes/flowable-archetype-unittest</module>
-	</modules>
+
+        <module>modules/flowable-osgi-config</module>
+    </modules>
 
 	<build>
 		<plugins>
@@ -1442,6 +1444,12 @@
 			<modules>
 				<module>modules/flowable-cxf</module>
 				<module>modules/flowable-mule</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>checkosgiconfig</id>
+			<modules>
+				<module>modules/flowable-osgi-config</module>
 			</modules>
 		</profile>
 		<profile>
