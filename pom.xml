@@ -1103,7 +1103,7 @@
 		<module>modules/flowable-ui-admin</module>
 		<module>tooling/archetypes/flowable-archetype-unittest</module>
 
-        <module>modules/flowable-osgi-config</module>
+
     </modules>
 
 	<build>
@@ -1446,12 +1446,7 @@
 				<module>modules/flowable-mule</module>
 			</modules>
 		</profile>
-		<profile>
-			<id>checkosgiconfig</id>
-			<modules>
-				<module>modules/flowable-osgi-config</module>
-			</modules>
-		</profile>
+
 		<profile>
 			<id>checkspring</id> <!-- [Joram] Is this still used?? -->
 			<modules>
