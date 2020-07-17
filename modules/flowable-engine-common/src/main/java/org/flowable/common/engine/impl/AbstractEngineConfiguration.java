@@ -668,7 +668,10 @@ public abstract class AbstractEngineConfiguration {
             InputStream inputStream = null;
             try {
                 inputStream = getMyBatisXmlConfigurationStream();
-
+                if  (inputStream ==  null ) {
+                    String msg = "\nNot found \"MyBatisXmlConfiguration\";" ;
+                    logger.error(msg);
+                }
                 Environment environment = new Environment("default", transactionFactory, dataSource);
                 Reader reader = new InputStreamReader(inputStream);
                 Properties properties = new Properties();

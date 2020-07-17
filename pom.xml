@@ -1104,9 +1104,17 @@
 		<module>modules/flowable-ui-admin</module>
 		<module>tooling/archetypes/flowable-archetype-unittest</module>
 
+        <module>modules/flowable-osgi-example</module>
 
+<<<<<<< HEAD
 
     </modules>
+=======
+		<module>modules/flowable-osgi-task</module>
+
+
+	</modules>
+>>>>>>> ba223cc1dbf2f0ea82095b294b0699d3283ae78c
 
 	<build>
 		<plugins>
