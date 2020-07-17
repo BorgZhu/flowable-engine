@@ -29,6 +29,8 @@ import org.flowable.common.engine.api.FlowableException;
 import org.flowable.common.engine.impl.db.MybatisTypeAliasConfigurator;
 import org.flowable.common.engine.impl.db.MybatisTypeHandlerConfigurator;
 import org.flowable.common.engine.impl.persistence.entity.Entity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -41,7 +43,7 @@ import org.xml.sax.SAXException;
  * @author Joram Barrez
  */
 public abstract class AbstractEngineConfigurator implements EngineConfigurator {
-
+    protected final Logger logger = LoggerFactory.getLogger(getClass());
     protected boolean enableMybatisXmlMappingValidation;
 
     @Override
@@ -100,7 +102,12 @@ public abstract class AbstractEngineConfigurator implements EngineConfigurator {
 
             List<MybatisTypeAliasConfigurator> typeAliasConfigurators = new ArrayList<>();
             List<MybatisTypeHandlerConfigurator> typeHandlerConfigurators = new ArrayList<>();
+
             try (InputStream inputStream = classLoader.getResourceAsStream(cfgPath)) {
+                if  (inputStream ==  null ) {
+                    String msg = "\nNot found \""  + cfgPath +  "\";" ;
+                    logger.error(msg);
+                }
                 DocumentBuilderFactory docBuilderFactory = createDocumentBuilderFactory();
                 DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
                 Document document = docBuilder.parse(inputStream);
